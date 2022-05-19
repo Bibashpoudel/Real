@@ -1,0 +1,98 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input:focus {
+  outline: 1px solid #e02822;
+  border: 0px;
+}
+
+select {
+  outline: none;
+}
+
+* {
+  font-family: "Lato", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  ion-icon {
+    color: black;
+  }
+
+  &:hover {
+    color: white;
+  }
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-offset: 9px;
+
+  ion-icon {
+    color: #e02822;
+  }
+}
+
+/* for loading image */
+
+.extra-small {
+  height: 5rem !important;
+  font-size: 2rem !important;
+  max-width: 7rem !important;
+  width: 100% !important;
+}
+/* end of design */
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-image: linear-gradient(
+    270deg,
+    rgba(197, 30, 61, 0.836) 0%,
+    #e96662 79.66%
+  );
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 150px;
+  right: 6vw;
+  border-radius: 50%;
+  display: none;
+  color: #e02822;
+  font-size: 40px;
+  cursor: pointer;
+  background-color: white;
+  z-index: 1000;
+
+  /* @media(min-width:576px){
+    bottom: 130px;
+    right: 10vw;
+  }
+
+  @media(min-width:992px){
+    bottom: 100px;
+  } */
+}
