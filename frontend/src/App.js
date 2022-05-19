@@ -28,7 +28,7 @@ function App() {
     document.documentElement.scrollTop = 0;
   }
   return (
-    <div className="App">
+    <>
       <ion-icon
         id="btn-back-to-top"
         onClick={() => backToTop()}
@@ -39,7 +39,7 @@ function App() {
           <Route path="/" element={<Home />}></Route>
         </Routes>
       </Router>
-    </div>
+    </>
   );
 }
 
