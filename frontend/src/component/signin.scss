@@ -1,0 +1,59 @@
+.model-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(211, 204, 204, 0.8);
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.model-container {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 1.2rem;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(227, 46, 46, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+.closebtn {
+  background-color: transparent;
+  border: none;
+  font-size: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  position: relative;
+  left: 95%;
+}
+.closebtn:hover {
+  color: rgba(227, 46, 46, 0.8);
+}
+.item-cred div {
+  padding-right: 2rem;
+  font-size: 1.8rem;
+}
+.signin-model-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.signin-model-body div {
+  padding: 0.5rem 4rem;
+}
+.model-input label {
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+}
+.model-input input {
+  outline: none;
+  border: 0.2rem solid rgba(227, 46, 46, 0.3);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.model-footer div {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+}

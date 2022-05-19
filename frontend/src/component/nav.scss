@@ -2,9 +2,24 @@
   .brand {
     margin: auto 0;
   }
+  .mob-menu-item {
+    display: none;
+    @media (max-width: 623px) {
+      display: flex;
+    }
+    @media (max-width: 424px) {
+      margin-top: 1rem;
+    }
+  }
+  .mob-menu-item div {
+    padding-right: 2rem;
+  }
   .menu-item {
     padding-left: 3rem;
     margin: auto 0;
+    @media (max-width: 623px) {
+      display: none;
+    }
   }
   .menu-item div {
     padding-left: 2rem;

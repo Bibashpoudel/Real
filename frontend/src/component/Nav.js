@@ -1,7 +1,8 @@
 import React from "react";
 import "./nav.scss";
+import Signin from "./Signin";
 
-export default function Nav() {
+export default function Nav({ openModel }) {
   return (
     <div className="full-container">
       <div
@@ -29,19 +30,30 @@ export default function Nav() {
           className="right-nav flex"
           style={{ fontSize: "1.3rem", fontWeight: "500" }}
         >
-          <div style={{ padding: "0.5rem" }}>
+          {/* <div style={{ padding: "0.5rem" }}>
             <ion-icon
               style={{ color: "rgba(227, 46, 46, 0.85)", fontSize: "2.5rem" }}
               name="search-outline"
             ></ion-icon>
-          </div>
+          </div> */}
           <div>
             <button className=" btn hover">Sell</button>
           </div>
           <div>
-            <button className=" btn primary">Login</button>
+            <button className=" btn primary" onClick={() => openModel(true)}>
+              Login
+            </button>
           </div>
         </div>
+      </div>
+      <div
+        className=" container mob-menu-item flex "
+        style={{ fontSize: "1.3rem", fontWeight: "500" }}
+      >
+        <div>House</div>
+        <div>Land</div>
+        <div>Buy</div>
+        <div>Rent</div>
       </div>
     </div>
   );
