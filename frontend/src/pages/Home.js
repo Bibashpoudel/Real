@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import Footer from "../component/Footer";
 import Nav from "../component/Nav";
 import "./home.scss";
 import search from "../images/search.jpg";
 import Signin from "../component/Signin";
+import Card from "../component/Card";
 
 export default function Home() {
   const [OpenModel, setOpenModel] = useState(false);
+  const element = [1, 2, 3, 4, 5];
   return (
     <div className="containers">
       {OpenModel && <Signin closeModel={setOpenModel}></Signin>}
@@ -68,7 +71,45 @@ export default function Home() {
             )}
             <img className="search-img" src={search} alt="searchimg"></img>{" "}
           </div>
-          <div className="container">main sections</div>
+          <div className="container">
+            <div className="flex flex-column features-list">
+              <div className="flex flex-space">
+                <div
+                  style={{
+                    fontSize: "1.8rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Features Listing
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.3rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Link
+                    style={{
+                      fontSize: "1.3rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                      cursor: "pointer",
+                      textDecoration: "none",
+                    }}
+                    to="/features"
+                  >
+                    See All
+                  </Link>
+                </div>
+              </div>
+              <div className="flex flex-wrap justify-center">
+                {element.map((index) => (
+                  <Card index={index}></Card>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </main>
       <footer>

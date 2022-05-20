@@ -36,6 +36,13 @@ export default function Nav({ openModel }) {
               name="search-outline"
             ></ion-icon>
           </div> */}
+          <div className="select-option">
+            <select>
+              <option>Chitwan</option>
+              <option>Kathmandu</option>
+              <option>Hetuda</option>
+            </select>
+          </div>
           <div>
             <button className=" btn hover">Sell</button>
           </div>
