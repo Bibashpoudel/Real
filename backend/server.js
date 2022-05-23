@@ -1,8 +1,14 @@
+import bodyParser from "body-parser";
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import mongoose from "mongoose";
+import typesRouter from "./router/typesRouter.js";
 
 const app = express();
+
+//request parsing
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // connecting to mongoo database
 mongoose
@@ -21,6 +27,8 @@ app.get(
     res.status(200).send("hello server open");
   })
 );
+
+app.use("/types", typesRouter);
 
 app.listen(5002, () => {
   console.log("server is running at " + "http://localhost:5002");
