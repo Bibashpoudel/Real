@@ -47,47 +47,44 @@
   margin-top: 2rem;
 }
 
-// designing card
-.card-box {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background-color: #f8f5f5;
-  width: 18.5rem;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  margin-right: 2rem;
-}
-.types {
-  position: absolute;
-  margin-top: 10.4rem;
-}
-.type-box {
-  background-color: rgba(255, 255, 255, 0.62);
-  padding: 0.2rem 1rem 0.2rem 0;
-}
-.price-box {
-  background-color: rgba(22, 49, 90, 0.8);
+// swiper design
+.homeswiper1 {
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: 35% !important;
+  }
 
-  padding: 0.2rem 1rem 0.2rem 0;
-  color: white;
+  @media (max-width: 575px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+  .swiper-pagination {
+    bottom: 0px !important;
+  }
 }
-.card-body {
-  margin: 0.5rem;
+// section 2nd
+.our-service {
+  background-color: red;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid rgba(221, 221, 221, 0.8);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
 }
-.card-body .address {
-  width: 10rem;
-  display: block; /* or inline-block */
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow: hidden;
-  max-height: 2.1em;
+
+.our-service div {
+  padding: 1rem;
 }
-.card-body .address:hover {
-  overflow: visible;
-  max-height: 100%;
-  width: 80%;
-  white-space: normal;
+
+.tag-filter div {
+  padding: 0.5rem 0;
 }
-.card-footer {
-  padding-bottom: 1rem;
+.house-type {
+  background: #ffffff;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }

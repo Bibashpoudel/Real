@@ -55,6 +55,13 @@ body::-webkit-scrollbar {
     #e96662 79.66%
   );
 }
+// color design type
+.primary-color {
+  color: rgba(227, 46, 46, 0.85);
+}
+.primary-background {
+  background-color: rgba(227, 46, 46, 0.85);
+}
 
 #btn-back-to-top {
   position: fixed;
@@ -167,8 +174,78 @@ body::-webkit-scrollbar {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+//margin-design
+.mgb-10 {
+  margin-bottom: 1rem;
+}
+.mgt-10 {
+  margin-top: 1rem;
+}
+.mgtb-20 {
+  margin: 2rem 0;
+}
+
+// padding design
+.pdb-10 {
+  padding-bottom: 1rem;
+}
+.pdt-10 {
+  padding-top: 1rem;
+}
 
 //  image decoration
 img.card-img {
-  width: 18.5rem;
+  max-width: 19rem;
+  width: 100%;
+}
+
+// designing cloumn
+.col-12 {
+  flex: 0 0 18%;
+  width: 100%;
+}
+.col-2 {
+  flex: 0 0 50%;
+  width: 100%;
+}
+.col-3 {
+  flex: 0 0 33%;
+  width: 100%;
+}
+.col-4 {
+  flex: 0 0 23%;
+  width: 100%;
+}
+
+// slider design
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

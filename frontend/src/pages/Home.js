@@ -103,10 +103,293 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex flex-wrap justify-center">
+              <div className="flex  " style={{ overflow: "hidden" }}>
                 {element.map((index) => (
                   <Card index={index}></Card>
                 ))}
+              </div>
+            </div>
+          </div>
+          <div className="container ">
+            <div className="flex flex-wrap flex-space mgt-10">
+              <div className="col-3 our-service ">
+                <div className="service-header">
+                  <ion-icon
+                    style={{
+                      fontSize: "5rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                    }}
+                    name="home-outline"
+                  ></ion-icon>
+                </div>
+                <div
+                  className="service-body"
+                  style={{
+                    fontSize: "2rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Buy Property
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.1rem",
+                    lineHeight: "1.4rem",
+                    fontWeight: "400",
+                  }}
+                >
+                  Find your place with an immersive photo experience and the
+                  most listings, including things you won’t find anywhere else.
+                </div>
+                <div className="service-footer">
+                  <button className="btn hover">Search</button>
+                </div>
+              </div>
+              <div className="col-3 our-service">
+                <div className="service-header">
+                  <ion-icon
+                    style={{
+                      fontSize: "5rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                    }}
+                    name="home-outline"
+                  ></ion-icon>
+                </div>
+                <div
+                  className="service-body"
+                  style={{
+                    fontSize: "2rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Sell Property
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.1rem",
+                    lineHeight: "1.4rem",
+                    fontWeight: "400",
+                  }}
+                >
+                  No matter what path you take to sell your home, we can help
+                  you navigate a successful sale.
+                </div>
+                <div className="service-footer">
+                  <button className="btn hover">Sell</button>
+                </div>
+              </div>
+              <div className="col-3 our-service">
+                <div className="service-header">
+                  <ion-icon
+                    style={{
+                      fontSize: "5rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                    }}
+                    name="home-outline"
+                  ></ion-icon>
+                </div>
+                <div
+                  className="service-body"
+                  style={{
+                    fontSize: "2rem",
+                    fontWeight: "600",
+                  }}
+                >
+                  Rent Property
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.1rem",
+                    lineHeight: "1.4rem",
+                    fontWeight: "400",
+                  }}
+                >
+                  We’re creating a seamless online experience – from shopping on
+                  the largest rental network, to applying, to paying rent.
+                </div>
+                <div className="service-footer">
+                  <button className="btn hover">Find</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="flex flex-column recent-list mgt-10 pdb-10">
+              <div className="flex flex-space">
+                <div
+                  style={{
+                    fontSize: "1.8rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Recent Listing
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.3rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Link
+                    style={{
+                      fontSize: "1.3rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                      cursor: "pointer",
+                      textDecoration: "none",
+                    }}
+                    to="/Recent Post"
+                  >
+                    See All
+                  </Link>
+                </div>
+              </div>
+              <div className="flex  " style={{ overflow: "hidden" }}>
+                {element.map((index) => (
+                  <Card index={index}></Card>
+                ))}
+              </div>
+              <div className="flex flex-center ">
+                {" "}
+                <button className="btn hover">Load More</button>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="flex flex-column recent-list mgt-10 pdb-10">
+              <div className="flex flex-space">
+                <div
+                  style={{
+                    fontSize: "1.8rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Rent Listing
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.3rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Link
+                    style={{
+                      fontSize: "1.3rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                      cursor: "pointer",
+                      textDecoration: "none",
+                    }}
+                    to="/Recent Post"
+                  >
+                    See All
+                  </Link>
+                </div>
+              </div>
+              <div className="flex  " style={{ overflow: "hidden" }}>
+                {element.map((index) => (
+                  <Card index={index}></Card>
+                ))}
+              </div>
+              <div className="flex flex-center ">
+                {" "}
+                <button className="btn hover">Load More</button>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="flex flex-column recent-list mgt-10 pdb-10">
+              <div className="flex flex-space">
+                <div
+                  style={{
+                    fontSize: "1.8rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Sell Listing
+                </div>
+                <div
+                  style={{
+                    fontSize: "1.3rem",
+                    color: "rgba(227, 46, 46, 0.85)",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Link
+                    style={{
+                      fontSize: "1.3rem",
+                      color: "rgba(227, 46, 46, 0.85)",
+                      cursor: "pointer",
+                      textDecoration: "none",
+                    }}
+                    to="/Recent Post"
+                  >
+                    See All
+                  </Link>
+                </div>
+              </div>
+              <div className="flex  " style={{ overflow: "hidden" }}>
+                {element.map((index) => (
+                  <Card index={index}></Card>
+                ))}
+              </div>
+              <div className="flex flex-center ">
+                {" "}
+                <button className="btn hover">Load More</button>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="flex flex-space text-center primary-color mgt-10 pdt-10 pdb-10">
+              <div className="col-4 tag-filter flex flex-column">
+                <div style={{ fontSize: "1.6rem", fontWeight: "bold" }}>
+                  head
+                </div>
+                <div>body</div>
+              </div>
+              <div className="col-4 tag-filter flex flex-column">
+                <div style={{ fontSize: "1.6rem", fontWeight: "bold" }}>
+                  head
+                </div>
+                <div>body</div>
+              </div>
+              <div className="col-4 tag-filter flex flex-column">
+                <div style={{ fontSize: "1.6rem", fontWeight: "bold" }}>
+                  head
+                </div>
+                <div>body</div>
+              </div>
+              <div className="col-4 tag-filter flex flex-column">
+                <div style={{ fontSize: "1.6rem", fontWeight: "bold" }}>
+                  head
+                </div>
+                <div>body</div>
+              </div>
+            </div>
+          </div>
+          <div className="container">
+            <div className="flex mgb-10 pdb-10">
+              <div className="col-2  house-type flex flex-column  ">
+                <div
+                  style={{ fontSize: "1.6rem", fontWeight: "bold" }}
+                  className="primary-color text-center  pdt-10"
+                >
+                  List of House For Different Purpose
+                </div>
+                <div className="flex justify-center mgt-10">
+                  <ul style={{ margin: "0", padding: "0" }}>
+                    <li>office</li>
+                    <li>general</li>
+                    <li>appartment</li>
+                    <li>genral</li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-2">
+                <img style={{ width: "100%" }} src={search} alt="search"></img>
               </div>
             </div>
           </div>
