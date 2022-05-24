@@ -8,7 +8,7 @@ cityRouter.get(
   "/",
   expressAsyncHandler(async (req, res) => {
     try {
-      const city = await City.find({});
+      const city = await City.find({}).populate("City", "name");
       return res.status(200).send(city);
     } catch (error) {
       return res.status(500).send({ message: "Internal Server Error" });
@@ -26,11 +26,12 @@ cityRouter.post(
       if (city) {
         return res.status(400).send({ message: "City already Exits" });
       }
-      const newCity = new City({
+      const newcity = new City({
         name: upercasetype,
+        city: req.body.city,
       });
-      await newCity.save();
-      return res.status(201).send({ message: "New City added successfully" });
+      await newcity.save();
+      return res.status(201).send({ message: "New city added successfully" });
     } catch (error) {
       return res.status(500).send({ message: "Internal Server Error" });
     }

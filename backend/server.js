@@ -2,12 +2,15 @@ import bodyParser from "body-parser";
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import mongoose from "mongoose";
-import cityRouter from "./router/cityRouter.js";
+import districtRouter from "./router/districtRouter.js";
 import otpRouter from "./router/otpRouter.js";
 import purposesRouter from "./router/purposeRouter.js";
+import subcityRouter from "./router/cityRouter.js";
 import tagRouter from "./router/tagRouter.js";
 import typesRouter from "./router/typesRouter.js";
 import userRouter from "./router/userRouter.js";
+import cityRouter from "./router/cityRouter.js";
+import stateRouter from "./router/stateRouter.js";
 
 const app = express();
 
@@ -35,8 +38,10 @@ app.get(
 
 app.use("/type", typesRouter);
 app.use("/tag", tagRouter);
-app.use("/city", cityRouter);
 app.use("/purpose", purposesRouter);
+app.use("/state", stateRouter);
+app.use("/district", districtRouter);
+app.use("/city", cityRouter);
 app.use("/otp", otpRouter);
 app.use("/user", userRouter);
 

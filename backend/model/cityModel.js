@@ -5,6 +5,10 @@ const citySchema = new mongoose.Schema(
     name: {
       type: String,
     },
+    district: {
+      type: mongoose.Schema.Types.ObjectID,
+      ref: "District",
+    },
   },
   { timestamps: true }
 );

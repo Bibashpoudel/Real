@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-const otpSchema = mongoose.Schema(
+const otpSchema = new mongoose.Schema(
   {
     code: {
       type: String,
