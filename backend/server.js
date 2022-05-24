@@ -2,6 +2,9 @@ import bodyParser from "body-parser";
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import mongoose from "mongoose";
+import cityRouter from "./router/cityRouter.js";
+import purposesRouter from "./router/purposeRouter.js";
+import tagRouter from "./router/tagRouter.js";
 import typesRouter from "./router/typesRouter.js";
 
 const app = express();
@@ -28,7 +31,10 @@ app.get(
   })
 );
 
-app.use("/types", typesRouter);
+app.use("/type", typesRouter);
+app.use("/tag", tagRouter);
+app.use("/city", cityRouter);
+app.use("/purpose", purposesRouter);
 
 app.listen(5002, () => {
   console.log("server is running at " + "http://localhost:5002");
