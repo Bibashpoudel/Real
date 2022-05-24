@@ -3,9 +3,11 @@ import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import mongoose from "mongoose";
 import cityRouter from "./router/cityRouter.js";
+import otpRouter from "./router/otpRouter.js";
 import purposesRouter from "./router/purposeRouter.js";
 import tagRouter from "./router/tagRouter.js";
 import typesRouter from "./router/typesRouter.js";
+import userRouter from "./router/userRouter.js";
 
 const app = express();
 
@@ -35,6 +37,8 @@ app.use("/type", typesRouter);
 app.use("/tag", tagRouter);
 app.use("/city", cityRouter);
 app.use("/purpose", purposesRouter);
+app.use("/otp", otpRouter);
+app.use("/user", userRouter);
 
 app.listen(5002, () => {
   console.log("server is running at " + "http://localhost:5002");
