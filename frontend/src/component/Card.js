@@ -14,6 +14,9 @@ export default function Card(props) {
             <div className="type-box ">RESEDENTAL</div>
             <div className="price-box ">Price</div>
           </div>
+          <div className="property-foricon flex">
+            <div className="rectangel">Sell</div>
+          </div>
           <img className="card-img btr-5 " src={search} alt="search"></img>
         </div>
         <div className="card-body flex flex-space">

@@ -33,4 +33,12 @@
   .right-nav div {
     padding-left: 2rem;
   }
+  .container {
+    .mov-right-nav {
+      display: none;
+      @media (max-width: 410px) {
+        display: block;
+      }
+    }
+  }
 }

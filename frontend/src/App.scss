@@ -93,6 +93,9 @@ body::-webkit-scrollbar {
 .container {
   width: 80%;
   margin: 0 auto;
+  @media (max-width: 500px) {
+    width: 90%;
+  }
 }
 
 // flex properties
@@ -184,6 +187,9 @@ body::-webkit-scrollbar {
 .mgtb-20 {
   margin: 2rem 0;
 }
+.mgt-3 {
+  margin: 0.3rem;
+}
 
 // padding design
 .pdb-10 {
@@ -192,7 +198,12 @@ body::-webkit-scrollbar {
 .pdt-10 {
   padding-top: 1rem;
 }
-
+.pd-10 {
+  padding: 1rem;
+}
+.pd-5 {
+  padding: 0.5rem;
+}
 //  image decoration
 img.card-img {
   object-fit: cover;
@@ -256,4 +267,10 @@ img.card-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+// design radio box
+
+input:checked ~ .checkmark {
+  background-color: rgba(227, 46, 46, 0.8);
 }
