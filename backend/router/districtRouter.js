@@ -1,6 +1,6 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
-import District from "../model/districtModel.js";
+import District from "../model/city/districtModel.js";
 
 const districtRouter = express.Router();
 

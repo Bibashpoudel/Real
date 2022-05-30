@@ -26,6 +26,9 @@
   }
   .right-nav {
     margin: auto 0;
+    @media (max-width: 410px) {
+      display: none;
+    }
   }
   .right-nav div {
     padding-left: 2rem;

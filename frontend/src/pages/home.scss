@@ -6,7 +6,6 @@
     "footer";
   grid-template-columns: 1fr;
   grid-template-rows: 6rem 1fr 5rem;
-  height: 100vh;
 }
 .search-img {
   background-repeat: no-repeat;
@@ -48,25 +47,24 @@
 }
 
 // swiper design
-.homeswiper1 {
-  .swiper-button-prev,
-  .swiper-button-next {
-    top: 35% !important;
-  }
+// .homeswiper1 {
+//   .swiper-button-prev,
+//   .swiper-button-next {
+//     top: 35% !important;
+//   }
 
-  @media (max-width: 575px) {
-    .swiper-button-prev,
-    .swiper-button-next {
-      display: none;
-    }
-  }
-  .swiper-pagination {
-    bottom: 0px !important;
-  }
-}
+//   @media (max-width: 575px) {
+//     .swiper-button-prev,
+//     .swiper-button-next {
+//       display: none;
+//     }
+//   }
+//   .swiper-pagination {
+//     bottom: 0px !important;
+//   }
+// }
 // section 2nd
 .our-service {
-  background-color: red;
   text-align: center;
   background: #ffffff;
   border: 1px solid rgba(221, 221, 221, 0.8);

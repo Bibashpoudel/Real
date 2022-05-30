@@ -3,13 +3,27 @@ import { Link } from "react-router-dom";
 import Footer from "../component/Footer";
 import Nav from "../component/Nav";
 import "./home.scss";
+import "../style.css";
 import search from "../images/search.jpg";
 import Signin from "../component/Signin";
 import Card from "../component/Card";
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+import "swiper/css/bundle";
+
+// import required modules
+import { Navigation, Pagination } from "swiper";
+import SwiperCard from "../component/SwiperCard";
 export default function Home() {
   const [OpenModel, setOpenModel] = useState(false);
-  const element = [1, 2, 3, 4, 5];
+
+  const element = [1, 2, 3, 4];
+
   return (
     <div className="containers">
       {OpenModel && <Signin closeModel={setOpenModel}></Signin>}
@@ -19,61 +33,57 @@ export default function Home() {
       <main>
         <div>
           <div className="main-top ">
-            {OpenModel ? (
-              ""
-            ) : (
-              <div className="search-area">
+            <div className="search-area">
+              <div
+                style={{
+                  fontSize: "2.3rem",
+                  color: "rgba(227, 46, 46, 0.85)",
+                  fontWeight: "700",
+                  textAlign: "center",
+                }}
+              >
+                Find the Suitable Palace For You
+              </div>
+              <div className="search-filter flex">
+                <div>House</div>
+                <div>Land</div>
+                <div>Buy</div>
+                <div>Rent</div>
+              </div>
+              <div className="flex" style={{}}>
+                <input
+                  style={{
+                    outline: "none",
+                    border: "solid .1rem rgba(227, 46, 46, 0.85)",
+                    borderRadius: ".5rem 0rem 0rem 0.5rem",
+                    width: "100%",
+                  }}
+                  placeholder="Search By local place name, city"
+                ></input>
                 <div
                   style={{
-                    fontSize: "2.3rem",
-                    color: "rgba(227, 46, 46, 0.85)",
-                    fontWeight: "700",
-                    textAlign: "center",
+                    backgroundColor: "rgba(227, 46, 46, 0.85)",
+                    fontSize: "2.5rem",
+                    border: "1.rem solid rgba(227, 46, 46, 0.85)",
+                    borderRadius: "0rem 0.5rem 0.5rem 0rem",
+                    padding: "0.2rem .3rem",
                   }}
                 >
-                  Find the Suitable Palace For You
-                </div>
-                <div className="search-filter flex">
-                  <div>House</div>
-                  <div>Land</div>
-                  <div>Buy</div>
-                  <div>Rent</div>
-                </div>
-                <div className="flex" style={{}}>
-                  <input
+                  <ion-icon
                     style={{
-                      outline: "none",
-                      border: "solid .1rem rgba(227, 46, 46, 0.85)",
-                      borderRadius: ".5rem 0rem 0rem 0.5rem",
-                      width: "100%",
-                    }}
-                    placeholder="Search By local place name, city"
-                  ></input>
-                  <div
-                    style={{
-                      backgroundColor: "rgba(227, 46, 46, 0.85)",
+                      color: "white",
                       fontSize: "2.5rem",
-                      border: "1.rem solid rgba(227, 46, 46, 0.85)",
-                      borderRadius: "0rem 0.5rem 0.5rem 0rem",
-                      padding: "0.2rem .3rem",
                     }}
-                  >
-                    <ion-icon
-                      style={{
-                        color: "white",
-                        fontSize: "2.5rem",
-                      }}
-                      name="search-outline"
-                    ></ion-icon>
-                  </div>
+                    name="search-outline"
+                  ></ion-icon>
                 </div>
               </div>
-            )}
+            </div>
             <img className="search-img" src={search} alt="searchimg"></img>{" "}
           </div>
-          <div className="container">
+          <div className="container pdb-10">
             <div className="flex flex-column features-list">
-              <div className="flex flex-space">
+              <div className="flex flex-space mgb-10">
                 <div
                   style={{
                     fontSize: "1.8rem",
@@ -103,16 +113,47 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex  " style={{ overflow: "hidden" }}>
+
+              <Swiper
+                slidesPerView={1}
+                spaceBetween={30}
+                loop={true}
+                pagination={{
+                  clickable: true,
+                }}
+                breakpoints={{
+                  0: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                  },
+                  500: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                  },
+                  756: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                  },
+                  1000: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                  },
+                }}
+                navigation={true}
+                modules={[Pagination, Navigation]}
+                className="mySwiper flex flex-space"
+              >
                 {element.map((index) => (
-                  <Card index={index}></Card>
+                  <SwiperSlide key={index}>
+                    <SwiperCard index={index} key={index}></SwiperCard>
+                  </SwiperSlide>
                 ))}
-              </div>
+              </Swiper>
             </div>
           </div>
-          <div className="container ">
+          <div className="container pdb-10">
             <div className="flex flex-wrap flex-space mgt-10">
-              <div className="col-3 our-service ">
+              <div className="col-3 our-service mgb-10">
                 <div className="service-header">
                   <ion-icon
                     style={{
@@ -145,7 +186,7 @@ export default function Home() {
                   <button className="btn hover">Search</button>
                 </div>
               </div>
-              <div className="col-3 our-service">
+              <div className="col-3 our-service mgb-10">
                 <div className="service-header">
                   <ion-icon
                     style={{
@@ -178,7 +219,7 @@ export default function Home() {
                   <button className="btn hover">Sell</button>
                 </div>
               </div>
-              <div className="col-3 our-service">
+              <div className="col-3 our-service mgb-10">
                 <div className="service-header">
                   <ion-icon
                     style={{
@@ -245,7 +286,10 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex  " style={{ overflow: "hidden" }}>
+              <div
+                className="flex flex-space card-responsive mgb-10"
+                style={{ overflow: "hidden" }}
+              >
                 {element.map((index) => (
                   <Card index={index}></Card>
                 ))}
@@ -288,7 +332,10 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex  " style={{ overflow: "hidden" }}>
+              <div
+                className="flex flex-space card-responsive mgb-10 "
+                style={{ overflow: "hidden" }}
+              >
                 {element.map((index) => (
                   <Card index={index}></Card>
                 ))}
@@ -331,7 +378,10 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
-              <div className="flex  " style={{ overflow: "hidden" }}>
+              <div
+                className="flex flex-space card-responsive mgb-10 "
+                style={{ overflow: "hidden" }}
+              >
                 {element.map((index) => (
                   <Card index={index}></Card>
                 ))}

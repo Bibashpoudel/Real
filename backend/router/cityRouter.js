@@ -1,6 +1,6 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
-import City from "../model/cityModel.js";
+import City from "../model/city/cityModel.js";
 
 const cityRouter = express.Router();
 

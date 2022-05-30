@@ -2,13 +2,10 @@ import React from "react";
 import search from "../images/search.jpg";
 import "./card.scss";
 
-export default function Card(props) {
-  console.log(props.index);
+export default function SwiperCard() {
   return (
-    <div
-      className={`col-12 card-box flex flex-column btr-5 bbr-5 card-responsive-${props.index} mgb-10`}
-    >
-      <div className="col-12">
+    <div className=" card-box flex flex-column btr-5 bbr-5">
+      <div>
         <div className="card-header">
           <div className="types flex flex-column  ">
             <div className="type-box ">RESEDENTAL</div>

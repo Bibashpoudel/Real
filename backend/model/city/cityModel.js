@@ -5,7 +5,11 @@ const citySchema = new mongoose.Schema(
     name: {
       type: String,
     },
-    district: {
+    state_id: {
+      type: mongoose.Schema.Types.ObjectID,
+      ref: "State",
+    },
+    district_id: {
       type: mongoose.Schema.Types.ObjectID,
       ref: "District",
     },

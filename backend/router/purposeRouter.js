@@ -1,6 +1,6 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
-import Purpose from "../model/purposeModel.js";
+import Purpose from "../model/property/purposeModel.js";
 
 const purposesRouter = express.Router();
 

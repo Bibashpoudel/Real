@@ -1,6 +1,6 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
-import State from "../model/stateModel.js";
+import State from "../model/city/stateModel.js";
 
 const stateRouter = express.Router();
 

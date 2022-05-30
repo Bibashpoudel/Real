@@ -1,6 +1,6 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
-import Types from "../model/typesModel.js";
+import Types from "../model/property/typesModel.js";
 
 const typesRouter = express.Router();
 

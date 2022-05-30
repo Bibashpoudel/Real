@@ -5,12 +5,11 @@ import mongoose from "mongoose";
 import districtRouter from "./router/districtRouter.js";
 import otpRouter from "./router/otpRouter.js";
 import purposesRouter from "./router/purposeRouter.js";
-import subcityRouter from "./router/cityRouter.js";
-import tagRouter from "./router/tagRouter.js";
 import typesRouter from "./router/typesRouter.js";
 import userRouter from "./router/userRouter.js";
 import cityRouter from "./router/cityRouter.js";
 import stateRouter from "./router/stateRouter.js";
+import property_forRouter from "./router/property_forRouter.js";
 
 const app = express();
 
@@ -37,7 +36,7 @@ app.get(
 );
 
 app.use("/type", typesRouter);
-app.use("/tag", tagRouter);
+app.use("/property_for", property_forRouter);
 app.use("/purpose", purposesRouter);
 app.use("/state", stateRouter);
 app.use("/district", districtRouter);
