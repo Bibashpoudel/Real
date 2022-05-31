@@ -1,58 +1,29 @@
 import React, { useState } from "react";
+import Card from "../component/Card";
 import Footer from "../component/Footer";
 import Nav from "../component/Nav";
 import Signin from "../component/Signin";
 import "./property.scss";
-
-export default function Property() {
+import "../component/listcard.scss";
+import ListCard from "../component/ListCard";
+import MultiRangeSlider from "../component/multislider/MultiRangeSlider.js";
+import MobFilter from "../component/MobFilter";
+export default function Property({ openFilter }) {
   const [OpenModel, setOpenModel] = useState(false);
-  const rangeInput = document.querySelectorAll(".range-input input"),
-    priceInput = document.querySelectorAll(".price-input input"),
-    range = document.querySelector(".slider .progress");
-  let priceGap = 1000;
-  priceInput.forEach((input) => {
-    input.addEventListener("input", (e) => {
-      let minPrice = parseInt(priceInput[0].value),
-        maxPrice = parseInt(priceInput[1].value);
+  const [OpenFilter, setOpenFilter] = useState(false);
+  const [ListView, setListView] = useState(false);
+  const element = [1, 2, 3, 4, 5, 6, 7, 8];
 
-      if (maxPrice - minPrice >= priceGap && maxPrice <= rangeInput[1].max) {
-        if (e.target.className === "input-min") {
-          rangeInput[0].value = minPrice;
-          range.style.left = (minPrice / rangeInput[0].max) * 100 + "%";
-        } else {
-          rangeInput[1].value = maxPrice;
-          range.style.right = 100 - (maxPrice / rangeInput[1].max) * 100 + "%";
-        }
-      }
-    });
-  });
-  rangeInput.forEach((input) => {
-    input.addEventListener("input", (e) => {
-      let minVal = parseInt(rangeInput[0].value),
-        maxVal = parseInt(rangeInput[1].value);
-      if (maxVal - minVal < priceGap) {
-        if (e.target.className === "range-min") {
-          rangeInput[0].value = maxVal - priceGap;
-        } else {
-          rangeInput[1].value = minVal + priceGap;
-        }
-      } else {
-        priceInput[0].value = minVal;
-        priceInput[1].value = maxVal;
-        range.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-        range.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
-      }
-    });
-  });
   return (
     <div className="containers">
       {OpenModel && <Signin closeModel={setOpenModel}></Signin>}
+      {OpenFilter && <MobFilter closeFilter={setOpenFilter}></MobFilter>}
       <header>
         <Nav openModel={setOpenModel}></Nav>
       </header>
       <main className="mgb-10">
         <div className="container">
-          <div className="flex">
+          <div className="flex property-list">
             <div className="flex flex-column left-section">
               <div className="flex flex-column pd-5">
                 <div>
@@ -177,7 +148,14 @@ export default function Property() {
                   <div>
                     <h2 style={{ color: "rgba(227, 46,46,.8" }}>Price Range</h2>
                   </div>
-                  <div class="price-input">
+                  <MultiRangeSlider
+                    min={0}
+                    max={30000}
+                    onChange={({ min, max }) =>
+                      console.log(`min = ${min}, max = ${max}`)
+                    }
+                  />
+                  {/* <div class="price-input">
                     <div class="field">
                       <span>Min</span>
                       <input
@@ -216,11 +194,95 @@ export default function Property() {
                       value="7500"
                       step="100"
                     ></input>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
-            <div className="right-section">Two</div>
+
+            <div className="right-section flex flex-column">
+              <div className="mob-filter mgb-10">
+                <button
+                  className="btn primary"
+                  onClick={() => setOpenFilter(true)}
+                >
+                  Apply Filter
+                </button>
+              </div>
+              <div>
+                <div className="flex flex-space">
+                  <div>Filter Apply</div>
+                  <div>
+                    <select>
+                      <option>latest</option>
+                      <option>latest</option>
+                      <option>latest</option>
+                      <option>latest</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="flex flex-space flex-wrap align-center mgt-10">
+                  <div>Showing 29099 results as per your search criteria</div>
+                  <div>
+                    <input type="text"></input>
+                  </div>
+
+                  <div className="flex">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setListView(true)}
+                    >
+                      {ListView ? (
+                        <ion-icon
+                          style={{
+                            fontSize: "3rem",
+                            color: "rgba(227,46,46,.8)",
+                          }}
+                          name="list-outline"
+                        ></ion-icon>
+                      ) : (
+                        <ion-icon
+                          style={{ fontSize: "3rem" }}
+                          name="list-outline"
+                        ></ion-icon>
+                      )}
+                    </div>
+                    <div
+                      style={{ cursor: "pointer" }}
+                      onClick={() => setListView(false)}
+                    >
+                      {ListView ? (
+                        <ion-icon
+                          style={{ fontSize: "3rem" }}
+                          name="grid-outline"
+                        ></ion-icon>
+                      ) : (
+                        <ion-icon
+                          style={{
+                            fontSize: "3rem",
+                            color: "rgba(227,46,46,.8)",
+                          }}
+                          name="grid-outline"
+                        ></ion-icon>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr style={{ width: "100%" }}></hr>
+              {ListView ? (
+                <div className="Grid-view flex flex-column">
+                  {element.map((index) => (
+                    <ListCard index={index}></ListCard>
+                  ))}
+                </div>
+              ) : (
+                <div className="list-view flex flex-wrap flex-space">
+                  {element.map((index) => (
+                    <Card index={index}></Card>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </main>

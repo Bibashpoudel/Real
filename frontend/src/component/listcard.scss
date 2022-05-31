@@ -1,0 +1,36 @@
+.list-card {
+  background-color: #f8f5f5;
+  position: relative;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+// flag design
+#flag {
+  width: 5rem;
+  height: 3.2rem;
+  box-sizing: content-box;
+  position: absolute;
+  background: red;
+  color: white;
+  padding-top: 0.9rem;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-align: center;
+  text-transform: uppercase;
+  right: 0;
+  top: 0;
+  z-index: -0.9;
+}
+#flag:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 1.9rem solid #eee;
+  border-left: 2rem solid transparent;
+  border-right: 2.9rem solid transparent;
+}

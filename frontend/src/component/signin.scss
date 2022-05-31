@@ -1,17 +1,17 @@
+// height and negative margin
+
 .model-background {
   width: 100vw;
   height: 100vh;
   background-color: rgba(211, 204, 204, 0.8);
   position: fixed;
-  top: -20;
+
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 100000000;
 }
 .model-container {
-  width: 40rem;
-  height: 40rem;
   border-radius: 1.2rem;
   background-color: #fff;
   box-shadow: 0px 4px 4px rgba(227, 46, 46, 0.3);

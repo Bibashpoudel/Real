@@ -116,6 +116,9 @@ body::-webkit-scrollbar {
   justify-content: center;
   align-items: center;
 }
+.align-center {
+  align-items: center;
+}
 .justify-center {
   justify-content: center;
 }
@@ -177,6 +180,9 @@ body::-webkit-scrollbar {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+.bll-5 {
+  border-radius: 0.5rem;
+}
 //margin-design
 .mgb-10 {
   margin-bottom: 1rem;
@@ -189,6 +195,18 @@ body::-webkit-scrollbar {
 }
 .mgt-3 {
   margin: 0.3rem;
+}
+.mgt--8 {
+  margin-top: -8rem;
+}
+.mgt--8.sm {
+  @media (max-width: 380px) {
+    margin-top: -1rem !important;
+  }
+}
+
+.mgt--13 {
+  margin-top: -13rem;
 }
 
 // padding design
@@ -204,11 +222,33 @@ body::-webkit-scrollbar {
 .pd-5 {
   padding: 0.5rem;
 }
+
+// height design
+.h-40 {
+  height: 40rem;
+}
+// width design
+.wd-100 {
+  width: 100%;
+}
+.wd-40 {
+  width: 40rem;
+}
+.wd-30 {
+  width: 30rem;
+}
+
 //  image decoration
 img.card-img {
   object-fit: cover;
 
   width: 100%;
+}
+img {
+  max-width: 50rem;
+}
+img.list {
+  max-width: 20rem;
 }
 
 // designing cloumn
