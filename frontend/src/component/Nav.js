@@ -76,8 +76,14 @@ export default function Nav({ openModel }) {
             </button>
           </div>
         </div>
-        <div className="mov-right-nav">
-          {" "}
+        <div className="mov-right-nav ">
+          <div className="select-option">
+            <select>
+              <option>Chitwan</option>
+              <option>Kathmandu</option>
+              <option>Hetuda</option>
+            </select>
+          </div>{" "}
           <ion-icon
             style={{
               fontSize: "4rem",

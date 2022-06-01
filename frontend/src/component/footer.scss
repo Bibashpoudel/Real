@@ -1,0 +1,46 @@
+.footer-header {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-top: 2rem;
+}
+.footer-body {
+  padding-top: 0.5rem;
+}
+.footer-body div {
+  padding-top: 0.8rem;
+  font-size: 1.1rem;
+}
+.newsletter input {
+  padding: 1rem 5.5rem;
+}
+.btn-newsletter {
+  flex-direction: column;
+  width: 100%;
+}
+.btn-newsletter .btn {
+  width: 100%;
+}
+
+.footer-top {
+  @media (max-width: 989px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.footer-top .col-4 {
+  @media (max-width: 989px) {
+    flex: 0 0 33%;
+  }
+  @media (max-width: 680px) {
+    flex: 0 0 32%;
+  }
+  @media (max-width: 367px) {
+    flex: 0 0 31%;
+  }
+  @media (max-width: 348px) {
+    flex: 0 0 30%;
+  }
+  @media (max-width: 331px) {
+    flex: 0 0 38%;
+  }
+}

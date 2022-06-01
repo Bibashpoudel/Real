@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import { useEffect } from "react";
 import Property from "./pages/Property";
 import "./style.css";
+import DetailsPage from "./pages/DetailsPage";
 
 function App() {
   useEffect(() => {
@@ -15,8 +16,8 @@ function App() {
   function scrollFunction() {
     let mybutton = document.getElementById("btn-back-to-top");
     if (
-      document.body.scrollTop > 1000 ||
-      document.documentElement.scrollTop > 1000
+      document.body.scrollTop > 100 ||
+      document.documentElement.scrollTop > 100
     ) {
       console.log(document.body.scrollTop);
       mybutton.style.display = "block";
@@ -38,6 +39,7 @@ function App() {
       ></ion-icon>
       <Router>
         <Routes>
+          <Route path="/details" element={<DetailsPage />}></Route>
           <Route path="/property" element={<Property />}></Route>
           <Route path="/" exact element={<Home />}></Route>
         </Routes>

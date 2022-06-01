@@ -1,0 +1,93 @@
+.detail-page {
+  @media (max-width: 600px) {
+    align-items: center;
+  }
+}
+
+.details-img {
+  width: 100%;
+}
+.details-left {
+  flex: 0 0 70%;
+  @media (max-width: 894px) {
+    flex: 0 0 100%;
+  }
+}
+
+.image-hover-box {
+  background-color: #fff;
+
+  margin-top: -4rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  box-shadow: 0px 4px 4px 2px rgba(136, 131, 131, 0.25);
+  border-radius: 0.3rem;
+  @media (max-width: 500px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.hover-box-footer {
+  background: rgba(237, 137, 137, 0.1);
+  height: 3rem;
+  z-index: 10000000;
+}
+
+.information-box {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  height: 3rem;
+  border: 1px solid rgba(237, 236, 236, 0.44);
+  box-shadow: 1px 4px 4px 2px rgba(214, 205, 205, 0.25);
+  @media (max-width: 500px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+.box {
+  margin-top: 2rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  border: 1px solid rgba(237, 236, 236, 0.44);
+  box-shadow: 1px 4px 4px 2px rgba(214, 205, 205, 0.25);
+  @media (max-width: 500px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+.box-header {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.details-right {
+  flex: 1 2 30%;
+  @media (max-width: 894px) {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  @media (max-width: 500px) {
+    margin-left: 0.2rem;
+    margin-right: 0.2rem;
+  }
+}
+.right-box {
+  background: #ffffff;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  height: auto;
+  width: 100%;
+}
+.right-box-header {
+  background: rgba(245, 245, 245, 0.5);
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.rigbt-box-body {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+}

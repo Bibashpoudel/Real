@@ -27,17 +27,25 @@
   .right-nav {
     margin: auto 0;
     @media (max-width: 410px) {
-      display: none;
+      display: flex;
+      font-size: 0.8rem !important;
+      padding: 0rem;
     }
   }
+
   .right-nav div {
     padding-left: 2rem;
+    @media (max-width: 410px) {
+      display: flex;
+      font-size: 0.8rem !important;
+      padding-left: 0.4rem;
+    }
   }
   .container {
     .mov-right-nav {
       display: none;
       @media (max-width: 410px) {
-        display: block;
+        display: none;
       }
     }
   }

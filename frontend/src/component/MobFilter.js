@@ -2,20 +2,6 @@ import React, { useState } from "react";
 import MultiRangeSlider from "./multislider/MultiRangeSlider";
 import "./signin.scss";
 export default function MobFilter({ closeFilter }) {
-  const [signin, setSignIn] = useState(true);
-  const [signup, setSignUp] = useState(false);
-
-  const openSignup = (e) => {
-    e.preventDefault();
-    setSignIn(false);
-    setSignUp(true);
-  };
-  const openSignin = (e) => {
-    e.preventDefault();
-    setSignIn(true);
-    setSignUp(false);
-  };
-
   return (
     <div className="model-background mgt--8 sm">
       <div className="model-container wd-30">
