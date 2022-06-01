@@ -18,6 +18,8 @@
   display: flex;
   flex-direction: column;
   padding: 2.5rem;
+  min-width: 30rem;
+  width: 35%;
 }
 .closebtn {
   background-color: transparent;
@@ -57,4 +59,23 @@
 .model-footer div {
   padding: 0.5rem;
   font-size: 1.3rem;
+}
+.model-input {
+  position: relative;
+}
+.show-eye-icon {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+}
+.model-header {
+  font-size: 1.4rem;
+  margin-top: -2rem;
+  font-weight: 600;
+}
+.model-body {
+  margin-top: 2rem;
+}
+.mode-body div {
+  padding: 1rem;
 }

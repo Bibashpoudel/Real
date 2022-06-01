@@ -3,7 +3,6 @@ import search from "../images/search.jpg";
 import "./card.scss";
 
 export default function Card(props) {
-  console.log(props.index);
   return (
     <div
       className={`col-12 card-box flex flex-column btr-5 bbr-5 card-responsive-${props.index} mgb-10`}
